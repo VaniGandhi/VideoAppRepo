@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Chat App"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".QuizApp.SignupActivity"></activity>
+
+        <activity android:name=".Images.Draw_image" />
+        <activity android:name=".ChatApp.Register_Activity" />
+        <activity android:name=".VideoPlayer.Gallaryplayer" />
+        <activity android:name=".VideoPlayer.CameraPlayer" />
+        <activity android:name=".VideoPlayer.Play_with_url" />
+        <activity android:name=".VideoPlayer.VideoPlayerScreen" />
+        <activity android:name=".Images.Blur_image" />
+        <activity android:name=".ChatApp.All_users_Activity" />
+        <activity android:name=".ChatApp.Message_Activity" />
+        <activity android:name=".ChatApp.ChattingActivity" />
+        <activity android:name=".ChatApp.Start_Activity" />
+        <activity android:name=".ChatApp.User_Profile" />
+        <activity android:name=".ChatApp.All_users_with_chats" />
+        <activity android:name=".Main_Screen" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ForgotpasswordActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".VideoPlayer.SongListScreen" />
+        <activity android:name=".VideoPlayer.VideoLaunchScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.myapplication"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name=".ChatApp.Notifications.MyFirebaseIdService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ChatApp.Notifications.MyFirebaseMessagingservice"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

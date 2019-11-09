@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoPlayer.Play_with_url">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/appbarlayout">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbar">
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/enter_url"
+        android:hint="enter url"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="60dp"
+       android:layout_below="@id/appbarlayout"
+        />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_marginLeft="40dp"
+        android:src="@drawable/ic_send_black_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:id="@+id/enter_button"
+        android:layout_below="@id/appbarlayout"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/enter_url"
+        android:id="@+id/videoplayer">
+
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+
+            android:id="@+id/vv"/>
+        <ProgressBar
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/progrss"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

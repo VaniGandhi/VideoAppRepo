@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    tools:context=".Images.DrawerViewActivity" >
+  <com.example.myapplication.Images.DrawerView
+      android:id ="@+id/draw"
+      android:layout_width="match_parent"
+      android:background="@android:color/white"
+      android:layout_above="@+id/relate"
+      android:layout_height="wrap_content">
+  </com.example.myapplication.Images.DrawerView>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/relate"
+      android:orientation="horizontal"
+      android:weightSum="1"
+      android:padding="5dp"
+
+      android:layout_alignParentBottom="true">
+    <Button
+        android:id ="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:text="Share"
+        android:textAlignment="center"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/black"
+        android:textAllCaps="false"
+        android:textSize="14dp"
+        android:layout_marginBottom="30dp"
+        />
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"/>
+    <Button
+        android:id="@+id/undo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="Undo"
+        android:layout_weight=".5"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="14dp"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+  </LinearLayout>
+
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/relate"
+      android:visibility="gone"
+      android:id="@+id/img"/>
+
+</RelativeLayout>

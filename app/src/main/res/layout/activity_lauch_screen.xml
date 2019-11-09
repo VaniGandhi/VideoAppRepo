@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LauchScreen">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:id="@+id/shimmerlayout">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_person"
+        android:id="@+id/img"
+/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="400dp"
+        android:text="Signup"
+        android:textSize="20dp"
+        android:background="@drawable/multiplecolor_button"
+        android:id="@+id/lsignup_button"
+
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20dp"
+        android:text="Log in"
+        android:textSize="20dp"
+        android:background="@drawable/multiplecolor_button"
+        android:id="@+id/llogin_button"
+        android:layout_below="@+id/lsignup_button"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
